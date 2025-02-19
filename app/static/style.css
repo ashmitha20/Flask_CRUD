@@ -1,0 +1,190 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark theme variables */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-elevated: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #6c5ce7;
+    --accent-hover: #5649c0;
+    --danger: #e74c3c;
+    --border: #333;
+}
+
+/* Body and overall page */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--bg-secondary);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+header nav {
+    font-size: 0.95rem;
+}
+
+header nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid var(--border);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+form label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: -1rem;
+    display: block;
+}
+
+form input,
+form button {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+form button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+    padding: 0.8rem;
+}
+
+form button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+table th {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+table a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 1.25rem;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+    
+    table th, table td {
+        padding: 0.75rem;
+    }
+}

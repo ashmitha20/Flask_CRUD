@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask MongoDB CRUD App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>FLASK CRUD Application</h1>
+        <nav>
+            <a href="{{ url_for('users.get_users') }}">View Users</a> |
+            <a href="{{ url_for('users.add_user') }}">Add New User</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Welcome to Flask MongoDB CRUD App</h2>
+            <p>View users and modify user details in the database using CRUD operations.</p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Create:</strong> Add new users to the database with name, email, and secure password storage.</li>
+                <li><strong>Read:</strong> View all users in a clean, organized table format with essential information.</li>
+                <li><strong>Update:</strong> Modify existing user information while maintaining data integrity.</li>
+                <li><strong>Delete:</strong> Remove users from the system when they're no longer needed.</li>
+            </ul>
+
+            <h3>Technology Stack</h3>
+            <ul>
+                <li><strong>Backend:</strong> Flask Python framework</li>
+                <li><strong>Database:</strong> MongoDB NoSQL database</li>
+                <li><strong>Authentication:</strong> Bcrypt password hashing</li>
+                <li><strong>Frontend:</strong> HTML5, CSS3, Jinja2 templates</li>
+                <li><strong>Deployment:</strong> Docker containerization</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Flask MongoDB CRUD App &copy; 2025</p>
+    </footer>
+</body>
+</html>
